@@ -1,16 +1,17 @@
 //your JS code here. If required.
-function mapletters(word){
-	const lettermap={};
-	for(let i=0;i<word.length;i++)
-		{
-			const letter=word[i];
-			if(!lettermap[letter]){
-				lettermap[letter]=[i];
-			}
-			else{
-				lettermap[letter].push(i);
+function mapletters (word) {
+	const map = {};
+	
+	for (let i = 0; i < word.length; i++) {
+			const letter = word[i];
+			if(!map[letter]) {
+				map[letter] = [i];
+			} else {
+				map[letter].push(i);
 			}
 		}
-	return lettermap;
+
+	return map;
 }
+
 console.log(mapletters("dodo"));
